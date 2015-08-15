@@ -66,3 +66,6 @@ A useful tools or tips list for iOS application developing
 - [Auto Layout 使用心得（五）—— 根据文字、图片自动计算 UITableViewCell 高度](http://lvwenhan.com/ios/449.html)
 - [Auto Layout 使用心得（六）—— 制造炫酷的下拉刷新动画](http://lvwenhan.com/ios/450.html)
 
+关于切图和适配方面可以阅读一下两个攻略
+
+- [fitview-iOS切图攻略-关于适配的一些方式](fitview)
