@@ -8,7 +8,7 @@ A useful tools or tips list for iOS application developing
 
 **QQ群:483103713**
 
-申请须知：此群有地域限制，申请时需要告知你的家乡是否在湖南省内。
+申请须知：此群有地域限制，申请时需要告知你的家乡是否在湖南省内，属于哪个县市区。
 
 ----
 
