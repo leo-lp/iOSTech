@@ -75,3 +75,154 @@ A useful tools or tips list for iOS application developing
 关于切图和适配方面可以阅读一下两个攻略
 
 - [fitview-iOS切图攻略-关于适配的一些方式](fitview)
+
+##分离TableView
+
+为了减轻ViewController的代码量与工作量，实现的思路是把TableView的datasource和delegate分离成一个类去处理，通过注册的方式把UITableViewCell注册到TableView中。
+
+	-(void)registerCellClassUsingCellIdentifier:(NSArray *)cellClassArray
+	{
+    	for (Class identifier in cellClassArray) {
+        	[self registerClass:identifier forCellReuseIdentifier:NSStringFromClass(identifier)];
+    }
+	}
+
+	-(void)registerForTableViewAtExtend:(id)tableViewExtend
+	{
+    	self.dataSource = tableViewExtend;
+    	self.delegate = tableViewExtend;
+	}
+
+TableView分离的类：
+
+	#import <Foundation/Foundation.h>
+
+	@class POITable;
+	@class POIModelManager;
+
+	@interface POITableExtend : NSObject<UITableViewDataSource,UITableViewDelegate>
+
+	@property(copy,nonatomic) NSString *identifier;
+	@property(strong,nonatomic) POITable *tableView;
+	@property(strong,nonatomic) POIModelManager *manager;
+
+	- (id)initWithTableView:(POITable*)tableView cellIdentifier:(Class)cellIdentifier;
+
+	@end
+
+- [简单实现的Demo](https://github.com/icepy/withoutMe/tree/master/MVVMTableView)
+- [更轻量的 View Controllers](http://objccn.io/issue-1-1/)
+- [整洁的 Table View 代码](http://objccn.io/issue-1-2/)
+
+##关于BaseViewController
+
+一般在定义ViewController的时候都习惯于定义一个BaseViewController作为基类，这样做的好处是可以把公共属性提取出来，这样的代码结构会更清晰。
+
+某些情况下，其他的类无法继承于BaseViewController，而又想拥有它的属性或方法。
+
+- [关于iOS“多继承”的实现方式](http://www.jianshu.com/p/2e9382be43b)
+- [Objective-C 的“多继承”](http://blog.csdn.net/yiyaaixuexi/article/details/8970734)
+
+一些好用的BaseViewController源代码
+
+在模拟器的调试模式下运行时，将自动模拟内存警告。
+
+	- (void)viewDidAppear:(BOOL)animated
+	{
+  		[super viewDidAppear:animated];
+
+    	#if TARGET_IPHONE_SIMULATOR
+        	#ifdef DEBUG
+            	// If we are running in the simulator and it's the DEBUG target
+            	// then simulate a memory warning. Note that the DEBUG flag isn't
+            	// defined by default. To define it add this Preprocessor Macro for
+            	// the Debug target: DEBUG=1
+            	[self simulateMemoryWarning];
+        	#endif
+    	#endif
+	}
+
+	- (void)simulateMemoryWarning
+	{
+    	#if TARGET_IPHONE_SIMULATOR
+        	#ifdef DEBUG
+            	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), (CFStringRef)@"UISimulatedMemoryWarningNotification", NULL, NULL, true);
+        	#endif
+    	#endif
+	}
+
+设置导航控制器的标题
+
+	- (void)setTitle
+	{
+		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    	titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+    	titleLabel.backgroundColor = [UIColor clearColor];
+    	titleLabel.textColor = [UIColor blackColor];
+    	titleLabel.text = title;
+    	[titleLabel sizeToFit];
+    	self.navigationItem.titleView = titleLabel;
+	}
+	
+设置返回按钮
+
+	- (void)setLeftBackBtn
+	{
+    	UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    	backBtn.frame = CGRectMake(0, 0, 20, 20);
+    	[backBtn setImage:[UIImage imageNamed:@"global_back_white"] forState:UIControlStateNormal];
+    	[backBtn addTarget:self action:@selector(backBarClick) forControlEvents:UIControlEventTouchUpInside];
+    	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+	}
+	
+	- (void)backBarClick
+	{
+    	if (self.navigationController.viewControllers.count > 1) {
+        	[self.navigationController popViewControllerAnimated:YES];
+    	}
+	}
+
+> 定义一个block typedef void (^Normalblock)(void)
+	
+设置自定义左边按钮与标题
+
+	- (void)setLeftButtonTitle:(NSString *)title clickCallBack:(Normalblock)block
+	{
+    	UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    	leftBtn.frame = CGRectMake(0, 0, 50, 20);
+    	leftBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    	[leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    	[leftBtn setTitle:title forState:UIControlStateNormal];
+    	[leftBtn addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    	UIBarButtonItem *left = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    	self.navigationItem.leftBarButtonItem = left;
+    	_LeftBlock = block;
+	}
+	
+	- (void)leftBtnClick
+	{
+    	if (_LeftBlock == nil) {
+        	[self.navigationController popViewControllerAnimated:YES];
+        	return;
+    	}
+    	_LeftBlock();
+	}
+
+设置自定义右边按钮与标题
+
+	- (void)setRightButtonTitle:(NSString *)title clickCallBack:(Normalblock)block
+	{
+    	UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    	rightBtn.frame = CGRectMake(0, 0, 50, 20);
+    	rightBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    	[rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    	[rightBtn setTitle:title forState:UIControlStateNormal];
+    	[rightBtn addTarget:self action:@selector(rightBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    	UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    	self.navigationItem.rightBarButtonItem = right;
+    	_RightBlock = block;
+	}
+	
+	- (void)rightBtnClick{
+    	_RightBlock();
+	}
