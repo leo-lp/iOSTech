@@ -6,7 +6,7 @@ A useful tools or tips list for iOS application developing
 
 不管是在湖南，还是在外地的湖南人，学生，或者已经工作的偏移，都可以加入**一起来学iOS（HN）**
 
-**QQ群:483103713**
+**QQ群：483103713**
 
 申请须知：此群有地域限制，申请时需要告知你的家乡是否在湖南省内，属于哪个县市区。
 
