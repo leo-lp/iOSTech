@@ -61,6 +61,11 @@ A useful tools or tips list for iOS application developing
 - [禅与 Objective-C 编程艺术](https://github.com/oa414/objc-zen-book-cn)
 - [C 语言常见问题集](http://c-faq-chn.sourceforge.net/ccfaq/index.html)
 
+##CocoaPods中国源
+
+- [https://gitcafe.com/akuandev/Specs.git](https://gitcafe.com/akuandev/Specs.git)
+- [http://git.oschina.net/akuandev/Specs.git](http://git.oschina.net/akuandev/Specs.git)
+
 ##iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
