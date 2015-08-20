@@ -48,6 +48,18 @@ A useful tools or tips list for iOS application developing
 
 - [iOS开发进阶，从Xcode开始](http://www.cocoachina.com/special/xcode/) ----- *这是一个非常全面的专题，Xcode 6.0+ 的使用。*
 
+##编程风格与最佳实践
+
+编程风格
+
+- [Google Objective-C风格指南](http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/contents/)
+- [RayWenderlich 官方 Swift 风格指南](http://swift.gg/2015/08/11/raywenderlich-swift-style-guide/)
+
+最佳实践
+
+- [禅与 Objective-C 编程艺术](https://github.com/oa414/objc-zen-book-cn)
+- [C 语言常见问题集](http://c-faq-chn.sourceforge.net/ccfaq/index.html)
+
 ##iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
