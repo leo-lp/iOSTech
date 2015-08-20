@@ -66,6 +66,10 @@ A useful tools or tips list for iOS application developing
 - [https://gitcafe.com/akuandev/Specs.git](https://gitcafe.com/akuandev/Specs.git)
 - [http://git.oschina.net/akuandev/Specs.git](http://git.oschina.net/akuandev/Specs.git)
 
+安装CocaoPods时所使用的源
+
+- [http://ruby.taobao.org/](http://ruby.taobao.org/)
+
 ##iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
