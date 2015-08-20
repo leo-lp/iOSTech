@@ -70,6 +70,8 @@ A useful tools or tips list for iOS application developing
 
 - [http://ruby.taobao.org/](http://ruby.taobao.org/)
 
+关于使用，可以阅读[用CocoaPods做iOS程序的依赖管理](http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/)
+
 ##iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
