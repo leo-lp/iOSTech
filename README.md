@@ -52,8 +52,9 @@ A useful tools or tips list for iOS application developing
 
 编程风格
 
-- [Google Objective-C风格指南](http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/contents/)
-- [RayWenderlich 官方 Swift 风格指南](http://swift.gg/2015/08/11/raywenderlich-swift-style-guide/)
+- [Google Objective-C编程风格指南](http://zh-google-styleguide.readthedocs.org/en/latest/google-objc-styleguide/contents/)
+- [RayWenderlich 官方 Swift 编程风格指南](http://swift.gg/2015/08/11/raywenderlich-swift-style-guide/)
+- [Google C++编程风格指南](http://zh-google-styleguide.readthedocs.org/en/latest/google-cpp-styleguide/contents/)
 
 最佳实践
 
