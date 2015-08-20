@@ -4,7 +4,7 @@ A useful tools or tips list for iOS application developing
 
 这个项目收集iOS开发所需要的一些资源与小技巧
 
-不管是在湖南的，还是在外地的湖南人，学生，工作了，都可以加入一起来学iOS（湖南）
+不管是在湖南，还是在外地的湖南人，学生，或者已经工作的偏移，都可以加入**一起来学iOS（HN）**
 
 **QQ群:483103713**
 
