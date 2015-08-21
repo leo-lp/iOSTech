@@ -250,3 +250,41 @@ TableView分离的类：
 	- (void)rightBtnClick{
     	_RightBlock();
 	}
+
+##Mantle使用
+
+[Mantle](https://github.com/Mantle/Mantle)可以快速的将JSON转化成Model类，节省了很多重复编码的时间。
+
+- [Mantle 初步使用](http://ourui.github.io/blog/2014/01/22/mantle-use/)
+- [工具篇：Mantle](http://southpeak.github.io/blog/2015/01/11/gong-ju-pian-:mantle/)
+- [使用Mantle处理Model层对象](http://blog.codingcoder.com/use-mantle-to-model/)
+
+三步走即可，第一步继承MTLModel并且实现MTLJSONSerializing协议
+
+	@interface JSONDataModel : MTLModel<MTLJSONSerializing>
+
+	@property (nonatomic, strong) NSDate *date;
+	
+	@end
+	
+第二步，在.m文件中实现MTLJSONSerializing协议的+ (NSDictionary *)JSONKeyPathsByPropertyKey方法
+
+	@implementation JSONDataModel
+	
+	+ (NSDictionary *)JSONKeyPathsByPropertyKey 
+	{
+		return @{
+			@"data":@"trueData" //JSON与Model一个一对应
+		}
+	}
+	@end
+	
+第三步，如果有特殊需求，比如类型转换，Mantle也提供了很多便捷的方法（可选实现）
+
+	+ (NSValueTransformer *)dateJSONTransformer {
+    	return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSNumber *dateNum) {
+        	return [NSDate dateWithTimeIntervalSince1970:dateNum.floatValue];
+    	} reverseBlock:^(NSDate *date) {
+        	return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
+    	}];
+	}
