@@ -288,3 +288,17 @@ TableView分离的类：
         	return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
     	}];
 	}
+	
+##Debug UI Reveal
+
+Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时动态地查看和修改应用程序的界面。它类似Chrome的“审查元素”功能，我们不但可以在运行时看到iOS程序的界面层级关系，还可以实时地修改程序界面，不用重新运行程序就可以看到修改之后的效果。
+
+请阅读
+
+- [Reveal：分析iOS UI的利器](http://security.ios-wiki.com/issue-3-4/)
+- [Reveal查看任意app的高级技巧](http://c.blog.sina.com.cn/profile.php?blogid=cb8a22ea89000gtw)
+
+使用pod安装一下它的SDK，就可以连接了。
+
+	pod 'Reveal-iOS-SDK', '~> 1.5.1'
+	
