@@ -12,6 +12,10 @@ A useful tools or tips list for iOS application developing
 
 ----
 
+##为什么你要拒绝我
+
+- [Why-Reject](https://github.com/jcccn/Why-Reject) ----- *苹果AppStore被拒理由大全*
+
 ##工具类
 
 - [SimPholders2](http://simpholders.com/) ----- *模拟器文件目录埋的太深，用这个工具可以直接定位到模拟器目录。*
@@ -302,3 +306,53 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
 
 	pod 'Reveal-iOS-SDK', '~> 1.5.1'
 	
+##Category添加属性
+
+有时候写了一个分类，发现属性不够用，那怎么办？这时候可以使用Runtime特性了。
+
+	#import <objc/runtime.h>
+	
+建立一个Category头文件
+
+	@interface ClassTest (CategoryTest)
+	
+	@property (nonatomic, strong) NSString *testString;
+	
+	@end
+	
+在实现文件中添加testString的getter和setter方法
+	
+	
+	static const void *IndieBandNameKey = &IndieBandNameKey;
+	@implementation ClassTest (CategoryTest) 
+	
+	@dynamic testString;
+	
+	-(void)setTestString:(NSString *)str  
+	{  
+    	objc_setAssociatedObject(self, IndieBandNameKey, str, OBJC_ASSOCIATION_COPY);  
+	}	  
+
+	-(NSString *)testString  
+	{  
+    	return objc_getAssociatedObject(self, IndieBandNameKey);  
+	}
+	
+	@end
+	
+	
+`objc_setAssociatedObject`方法有四个参数：源对象，关联时的用来标记是哪一个属性的key（因为你可能要添加很多属性），关联的对象和一个关联策略。
+
+关联策略枚举
+
+	enum {
+    	OBJC_ASSOCIATION_ASSIGN = 0, //关联对象的属性是弱引用 
+
+    	OBJC_ASSOCIATION_RETAIN_NONATOMIC = 1, //关联对象的属性是强引用并且关联对象不使用原子性
+
+    	OBJC_ASSOCIATION_COPY_NONATOMIC = 3, //关联对象的属性是copy并且关联对象不使用原子性
+
+    	OBJC_ASSOCIATION_RETAIN = 01401, //关联对象的属性是copy并且关联对象使用原子性
+
+    	OBJC_ASSOCIATION_COPY = 01403 //关联对象的属性是copy并且关联对象使用原子性
+	};
