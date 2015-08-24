@@ -391,3 +391,41 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
         	NSLog(@"ScrollDown now");
     	}
 	}
+	
+##UIScrollView添加约束的正确方式
+
+- 首先,scrollView自身的约束(scrollView的位置和尺寸)可以像正常的UIView一样参照其父控件添加.
+- 其次,scrollView内部子控件约束的添加需要遵循两个原则:
+	- scrollView内部子控件的尺寸不能以scrollView的尺寸为参照
+	- scrollView内部的子控件的约束必须完整
+
+代码案例：
+
+
+	__block NSUInteger curr = 0;
+    NSUInteger length = self.imageArray.count -1;
+    for (UIButton *currButton in self.imageArray) {
+        [currButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            NSUInteger nextPage = curr + 1;
+            NSUInteger prepPage = curr - 1;
+            if (curr > 0) {
+                UIButton *prepButton = (UIButton *)[self.imageArray objectAtIndex:prepPage];
+                if (length == curr) {
+                    make.left.equalTo(prepButton.mas_right).with.offset(0);
+                    make.right.mas_equalTo(0);
+                }else{
+                    UIButton *nextButton = (UIButton *)[self.imageArray objectAtIndex:nextPage];
+                    make.left.equalTo(prepButton.mas_right).with.offset(0);
+                    make.right.equalTo(nextButton.mas_left).with.offset(0);
+                }
+            }else{
+                UIButton *nextButton = (UIButton *)[self.imageArray objectAtIndex:nextPage];
+                make.left.mas_equalTo(0);
+                make.right.equalTo(nextButton.mas_left).with.offset(0);
+            }
+            make.top.mas_equalTo(0);
+            make.height.mas_equalTo(@230);
+            make.width.equalTo(self.scrollSuperview.mas_width);
+            curr++;
+        }];
+    }
