@@ -356,3 +356,38 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
 
     	OBJC_ASSOCIATION_COPY = 01403 //关联对象的属性是copy并且关联对象使用原子性
 	};
+	
+##判断UIScrollView是向上滚动还是向下滚动
+
+25 可以是任意数字，可根据自己的需要来设定。
+
+	int _lastPosition;    //A variable define in headfile  
+
+	- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+	{  
+    	int currentPostion = scrollView.contentOffset.y;  
+    	if (currentPostion - _lastPosition > 25) {  
+        	_lastPosition = currentPostion;  
+        	NSLog(@"ScrollUp now");  
+    	}  else if (_lastPosition - currentPostion > 25){  
+        	_lastPosition = currentPostion;  
+        	NSLog(@"ScrollDown now");  
+    	}  
+	}
+
+到达顶部或底部时不会反弹
+
+	- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+	{
+    	int currentPostion = scrollView.contentOffset.y;
+
+    	if (currentPostion - _lastPosition > 20  && currentPostion > 0) {        //这个地方加上 currentPostion > 0 即可）
+        	_lastPosition = currentPostion;
+
+        	NSLog(@"ScrollUp now");
+    	}else if ((_lastPosition - currentPostion > 20) && (currentPostion  <= scrollView.contentSize.height-scrollView.bounds.size.height-20) ){
+       		_lastPosition = currentPostion;
+	
+        	NSLog(@"ScrollDown now");
+    	}
+	}
