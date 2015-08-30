@@ -76,6 +76,14 @@ A useful tools or tips list for iOS application developing
 
 关于使用，可以阅读[用CocoaPods做iOS程序的依赖管理](http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/)
 
+##来自田伟宇的一些经验总结干货
+
+- [iOS应用架构谈（一）：架构设计的方法论](http://www.infoq.com/cn/articles/ios-app-arch-part-01)
+- [iOS应用架构谈（二）：View层的组织和调用方案（上）](http://www.infoq.com/cn/articles/ios-app-arch-2-1?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+- [iOS应用架构谈（二）：View层的组织和调用方案（中）](http://www.infoq.com/cn/articles/ios-app-arch-2-2?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+- [iOS应用架构谈（三）：View层的组织和调用方案（下）](http://www.infoq.com/cn/articles/ios-app-arch-2-3?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+- [iOS应用架构谈（三）：网络层设计方案(上)](http://www.infoq.com/cn/articles/ios-app-arch-3-1?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+
 ##iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
