@@ -4,7 +4,7 @@ A useful tools or tips list for iOS application developing
 
 这个项目收集iOS开发所需要的一些资源与小技巧
 
-不管是在湖南，还是在外地的湖南人，学生，或者已经工作的偏移，都可以加入**一起来学iOS（HN）**
+不管是在湖南，还是在外地的湖南人，学生，或者已经工作的朋友，都可以加入**一起来学iOS（HN）**
 
 **QQ群：483103713**
 
@@ -111,6 +111,11 @@ A useful tools or tips list for iOS application developing
 关于切图和适配方面可以阅读一下两个攻略
 
 - [fitview-iOS切图攻略-关于适配的一些方式](fitview)
+
+##常用高效率的宏定义与小技巧系列
+
+- [iOS开发中常用的一些宏定义](https://github.com/XFZLDXF/Macro/blob/master/MacroDefinition.h)
+- [记录各种iOS开发技巧](https://github.com/koknine/NOTE)
 
 ##分离TableView
 
