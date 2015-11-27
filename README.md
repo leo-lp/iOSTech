@@ -1,4 +1,4 @@
-##iOSTech
+# iOSTech
 
 A useful tools or tips list for iOS application developing
 
@@ -12,11 +12,11 @@ A useful tools or tips list for iOS application developing
 
 ----
 
-##为什么你要拒绝我
+## 为什么你要拒绝我
 
 - [Why-Reject](https://github.com/jcccn/Why-Reject) ----- *苹果AppStore被拒理由大全*
 
-##工具类
+## 工具类
 
 - [SimPholders2](http://simpholders.com/) ----- *模拟器文件目录埋的太深，用这个工具可以直接定位到模拟器目录。*
 - [Makeappicon](http://makeappicon.com/) ----- *上传一张1024x1024的图片，自动生成Icon Png。*
@@ -28,7 +28,7 @@ A useful tools or tips list for iOS application developing
 - [TinyPNG](https://tinypng.com/) ----- *这个工具可以用来压缩图片质量*
 - [Pixelmator](http://support.pixelmator.com/) ----- *这个工具可以用来切图或者查看设计稿*
 
-##Xcode 插件类
+## Xcode 插件类
 
 - [Alcatraz](https://github.com/supermarin/Alcatraz) ----- *这个差距可以用来管理Xcode其他所有的插件。*
 - [KSImageNamed-Xcode](https://github.com/ksuther/KSImageNamed-Xcode) ----- *使用UIImage时可以自动提示已经导入的图片。*
@@ -39,8 +39,9 @@ A useful tools or tips list for iOS application developing
 - [XAlign](https://github.com/qfish/XAlign) ----- *可以快速的使代码对其。*
 - [cocoapods-xcode-plugin](https://github.com/kattrali/cocoapods-xcode-plugin) ----- *方法查看和管理pod安装的第三方库。*
 - [Ciapre-Xcode-theme](https://github.com/vinhnx/Ciapre-Xcode-theme) ----- *这是我个人非常喜欢的一个主题。*
+- [WakaTime](https://github.com/wakatime/xcode-wakatime) ----- *记录编程时间*
 
-##Xcode 操作类
+## Xcode 操作类
 
 快速阅读
 
@@ -52,7 +53,13 @@ A useful tools or tips list for iOS application developing
 
 - [iOS开发进阶，从Xcode开始](http://www.cocoachina.com/special/xcode/) ----- *这是一个非常全面的专题，Xcode 6.0+ 的使用。*
 
-##编程风格与最佳实践
+## 时间都去哪儿了
+
+`wakatime`可以记录编程的时间，当然不仅仅是iOS开发。
+
+* 关于如何安装可以参考：[https://wakatime.com/help/plugins/xcode](https://wakatime.com/help/plugins/xcode)
+
+## 编程风格与最佳实践
 
 编程风格
 
@@ -65,7 +72,7 @@ A useful tools or tips list for iOS application developing
 - [禅与 Objective-C 编程艺术](https://github.com/oa414/objc-zen-book-cn)
 - [C 语言常见问题集](http://c-faq-chn.sourceforge.net/ccfaq/index.html)
 
-##CocoaPods中国源
+## CocoaPods中国源
 
 - [https://gitcafe.com/akuandev/Specs.git](https://gitcafe.com/akuandev/Specs.git)
 - [http://git.oschina.net/akuandev/Specs.git](http://git.oschina.net/akuandev/Specs.git)
@@ -76,15 +83,16 @@ A useful tools or tips list for iOS application developing
 
 关于使用，可以阅读[用CocoaPods做iOS程序的依赖管理](http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/)
 
-##来自田伟宇的一些经验总结干货
+## 来自田伟宇的一些经验总结干货
 
 - [iOS应用架构谈（一）：架构设计的方法论](http://www.infoq.com/cn/articles/ios-app-arch-part-01)
 - [iOS应用架构谈（二）：View层的组织和调用方案（上）](http://www.infoq.com/cn/articles/ios-app-arch-2-1?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
 - [iOS应用架构谈（二）：View层的组织和调用方案（中）](http://www.infoq.com/cn/articles/ios-app-arch-2-2?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
-- [iOS应用架构谈（三）：View层的组织和调用方案（下）](http://www.infoq.com/cn/articles/ios-app-arch-2-3?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
-- [iOS应用架构谈（三）：网络层设计方案(上)](http://www.infoq.com/cn/articles/ios-app-arch-3-1?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+- [iOS应用架构谈（二）：View层的组织和调用方案（下）](http://www.infoq.com/cn/articles/ios-app-arch-2-3?utm_source=infoq&utm_medium=related_content_link&utm_campaign=relatedContent_articles_clk)
+- [iOS应用架构谈（三）：网络层设计方案](http://casatwy.com/iosying-yong-jia-gou-tan-wang-luo-ceng-she-ji-fang-an.html)
+- [iOS应用架构谈（四）：本地持久化方案及动态部署](http://casatwy.com/iosying-yong-jia-gou-tan-ben-di-chi-jiu-hua-fang-an-ji-dong-tai-bu-shu.html)
 
-##iOS尺寸，适配的问题
+## iOS尺寸，适配的问题
 
 关于尺寸可以阅读一下译文。
 
@@ -112,12 +120,12 @@ A useful tools or tips list for iOS application developing
 
 - [fitview-iOS切图攻略-关于适配的一些方式](fitview)
 
-##常用高效率的宏定义与小技巧系列
+## 常用高效率的宏定义与小技巧系列
 
 - [iOS开发中常用的一些宏定义](https://github.com/XFZLDXF/Macro/blob/master/MacroDefinition.h)
 - [记录各种iOS开发技巧](https://github.com/koknine/NOTE)
 
-##分离TableView
+## 分离TableView
 
 为了减轻ViewController的代码量与工作量，实现的思路是把TableView的datasource和delegate分离成一个类去处理，通过注册的方式把UITableViewCell注册到TableView中。
 
@@ -155,7 +163,7 @@ TableView分离的类：
 - [更轻量的 View Controllers](http://objccn.io/issue-1-1/)
 - [整洁的 Table View 代码](http://objccn.io/issue-1-2/)
 
-##关于BaseViewController
+## 关于BaseViewController
 
 一般在定义ViewController的时候都习惯于定义一个BaseViewController作为基类，这样做的好处是可以把公共属性提取出来，这样的代码结构会更清晰。
 
@@ -268,7 +276,7 @@ TableView分离的类：
     	_RightBlock();
 	}
 
-##Mantle使用
+## Mantle使用
 
 [Mantle](https://github.com/Mantle/Mantle)可以快速的将JSON转化成Model类，节省了很多重复编码的时间。
 
@@ -306,7 +314,7 @@ TableView分离的类：
     	}];
 	}
 	
-##Debug UI Reveal
+## Debug UI Reveal
 
 Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时动态地查看和修改应用程序的界面。它类似Chrome的“审查元素”功能，我们不但可以在运行时看到iOS程序的界面层级关系，还可以实时地修改程序界面，不用重新运行程序就可以看到修改之后的效果。
 
@@ -319,7 +327,7 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
 
 	pod 'Reveal-iOS-SDK', '~> 1.5.1'
 	
-##Category添加属性
+## Category添加属性
 
 有时候写了一个分类，发现属性不够用，那怎么办？这时候可以使用Runtime特性了。
 
@@ -370,7 +378,7 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
     	OBJC_ASSOCIATION_COPY = 01403 //关联对象的属性是copy并且关联对象使用原子性
 	};
 	
-##判断UIScrollView是向上滚动还是向下滚动
+## 判断UIScrollView是向上滚动还是向下滚动
 
 25 可以是任意数字，可根据自己的需要来设定。
 
@@ -405,7 +413,7 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
     	}
 	}
 	
-##UIScrollView添加约束的正确方式
+## UIScrollView添加约束的正确方式
 
 - 首先,scrollView自身的约束(scrollView的位置和尺寸)可以像正常的UIView一样参照其父控件添加.
 - 其次,scrollView内部子控件约束的添加需要遵循两个原则:
@@ -442,3 +450,290 @@ Reveal 是一个界面调试工具，使用Reveal，我们可以在iOS开发时�
             curr++;
         }];
     }
+
+## NavigationController
+
+- 利用storyboard添加NavigationController
+
+在storyboard中选择一个UIViewController，然后在Xcode工具栏上选择Editor -> Embed in -> Navigation Controller，Xcode会帮助我们创建UINavigationController。
+
+然后在自己UIViewController中直接使用`self.navigationController` 
+
+- 在AppDelegate中使用代码添加
+
+关于层叠结构（理论不做论述），先从window中取出来初始化时的rootViewController，然后将它添加到初始化的NavigationController中，最后将NavigationController添加到window的rootViewController中。
+
+```Swift
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+   // Override point for customization after application launch.
+  let navC:UINavigationController = UINavigationController(rootViewController:(self.window?.rootViewController)!)
+  self.window?.rootViewController = navC
+  return true
+}
+```
+
+- navigationBar
+
+navigationBar是一个全局的属性，这也意味着你修改navigationBar中的属性将作用在之后所有的UIViewController中。
+
+```Swift
+self.navigationController?.navigationBar.barStyle = .Default
+self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+self.navigationController?.setNavigationBarHidden(<#T##hidden: Bool##Bool#>, animated: <#T##Bool#>)
+```
+
+- navigationItem
+
+每一个UIViewController中都有一个navigationController属性，而navigationItem相当于是在navigationController中管理的对应的`UIViewController`，修改这个唯一的属性，只会作用在当前的UIViewController中，不会修改之后的。
+
+```Swift
+self.navigationItem.title = "imageView"
+self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回",style:UIBarButtonItemStyle.Done, target: self, action: "backHandler")
+
+func backHandler(){
+   self.navigationController?.popViewControllerAnimated(true)
+}        
+```
+## Method Swizzling
+
+- class_replaceMethod 替换类方法的定义
+- method_exchangeImplementations 交换 2 个方法的实现
+- method_setImplementation 设置 1 个方法的实现
+
+Objective-C
+
+```Objective-C
+/**
+ *  交换两个方法
+ */
++(void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method viewDidLoad = class_getInstanceMethod(self, @selector(viewDidLoad));
+        Method viewDidLoaed = class_getInstanceMethod(self, @selector(viewDidLoaed));
+        method_exchangeImplementations(viewDidLoad, viewDidLoaed);
+    });
+}
+
+-(void)viewDidLoaed
+{
+    [self viewDidLoaed];
+    NSLog(@"%@ did load",self);
+}
+
+
++(void)load
+{
+    static dispatch_once_t onceToKen;
+    dispatch_once(&onceToKen, ^{
+        Method viewDidLoad = class_getInstanceMethod(self, @selector(viewDidLoad));
+        _VIMP viewDidLoad_VIMP = (_VIMP)method_getImplementation(viewDidLoad);
+        method_setImplementation(viewDidLoad, imp_implementationWithBlock(^(id target,SEL selector){
+            viewDidLoad_VIMP(target,selector);
+            NSLog(@"IMP ---> %@",target);
+        }));
+    });
+}
+```
+Siwft
+
+```Swift
+// MARK: - 交换两个方法
+
+extension UIViewController{
+    public override class func initialize(){
+        struct Static{
+            static var token:dispatch_once_t = 0
+        }
+        if self != UIViewController.self{
+            return
+        }
+        dispatch_once(&Static.token, {
+            _ in
+            let viewDidLoad = class_getInstanceMethod(self, Selector("viewDidLoad"))
+            let viewDidLoaded = class_getInstanceMethod(self, Selector("viewDidLoaded"))
+            method_exchangeImplementations(viewDidLoad,viewDidLoaded)
+        })
+    }
+    func viewDidLoaded(){
+        self.viewDidLoaded()
+        print("init --- > \(self)")
+    }
+}
+
+
+// MARK: - 使用IMP
+
+typealias _IMP = @convention(c)(id:AnyObject,sel:UnsafeMutablePointer<Selector>)->AnyObject
+typealias _VIMP = @convention(c)(id:AnyObject,sel:UnsafeMutablePointer<Selector>)->Void
+
+extension UIViewController{
+    public override class func initialize(){
+        struct Static{
+            static var token:dispatch_once_t = 0
+        }
+        if self != UIViewController.self{
+            return
+        }
+        
+        dispatch_once(&Static.token, {
+            _ in
+            let viewDidLoad:Method = class_getInstanceMethod(self, Selector("viewDidLoad"))
+            let viewDidLoad_VIMP:_VIMP = unsafeBitCast(method_getImplementation(viewDidLoad),_VIMP.self)
+            let block:@convention(block)(UnsafeMutablePointer<AnyObject>,UnsafeMutablePointer<Selector>)->Void = {
+                (id,sel) in
+                viewDidLoad_VIMP(id: id.memory, sel: sel)
+                print("viewDidLoad func execu over id ---> \(id.memory)");
+            }
+            let imp:COpaquePointer = imp_implementationWithBlock(unsafeBitCast(block, AnyObject.self))
+            method_setImplementation(viewDidLoad,imp)
+        })
+    }
+    
+    private struct Associa{
+        static var Name:String = "UIStackView_Name"
+    }
+    
+    var name:String{
+        get{
+            return objc_getAssociatedObject(self,&Associa.Name) as! String
+        }
+        set(newValue){
+            objc_setAssociatedObject(self, &Associa.Name, newValue as String?, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+```
+
+
+## Runtime
+
+Objective-C的类都是由Class类型来表示的，它是一个指向objc_class结构体的指针，定义如下：
+
+```Objective-C
+typedef struct objc_class *Class;
+```
+
+objc_class结构体定义如下：
+
+```Objective-C
+struct objc_class {
+	Class isa  OBJC_ISA_AVAILABILITY;
+#if !__OBJC2__
+	Class super_class                       OBJC2_UNAVAILABLE;  // 父类
+	const char *name                        OBJC2_UNAVAILABLE;  // 类名
+	long version                            OBJC2_UNAVAILABLE;  // 类的版本信息，默认为0
+	long info                               OBJC2_UNAVAILABLE;  // 类信息，供运行期使用的一些位标识
+	long instance_size                      OBJC2_UNAVAILABLE;  // 该类的实例变量大小
+	struct objc_ivar_list *ivars            OBJC2_UNAVAILABLE;  // 该类的成员变量链表
+	struct objc_method_list **methodLists   OBJC2_UNAVAILABLE;  // 方法定义的链表
+	struct objc_cache *cache                OBJC2_UNAVAILABLE;  // 方法缓存
+	struct objc_protocol_list *protocols    OBJC2_UNAVAILABLE;  // 协议链表
+#endif
+
+} OBJC2_UNAVAILABLE;
+```
+
+如何操作类：
+
+```Objectice-C
+Class newClass = objc_allocateClassPair([NSError class], "AMNClass", 0); // 创建新的类
+class_addMethod(newClass, @selector(testMetaClass), (IMP)TestMetaClass, "v@:"); // 为新的类添加方法
+objc_registerClassPair(newClass); // 注册创建的类
+id instance = [[newClass alloc] initWithDomain:@"some domain" code:0 userInfo:nil]; // 实例化对象
+[instance performSelector:@selector(testMetaClass)]; // 调用方法
+// 获取类的类名
+const char * class_getName ( Class cls );
+// 获取类的父类
+Class class_getSuperclass ( Class cls );
+// 判断给定的Class是否是一个元类
+BOOL class_isMetaClass ( Class cls );
+// 获取实例大小
+size_t class_getInstanceSize ( Class cls );
+
+```
+
+在`objc_class`中，所有的成员变量、属性的信息是放在链表ivars中的。ivars是一个class_copylvarList函数，它返回一个指向成员变量信息的数组。
+
+```Objective-C
+// 获取指定的属性
+objc_property_t class_getProperty ( Class cls, const char *name );
+// 获取属性列表
+objc_property_t * class_copyPropertyList ( Class cls, unsigned int *outCount );
+// 为类添加属性
+BOOL class_addProperty ( Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount );
+// 替换类的属性
+void class_replaceProperty ( Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount );
+// 添加方法
+BOOL class_addMethod ( Class cls, SEL name, IMP imp, const char *types );
+// 获取实例方法
+Method class_getInstanceMethod ( Class cls, SEL name );
+// 获取类方法
+Method class_getClassMethod ( Class cls, SEL name );
+// 获取所有方法的数组
+Method * class_copyMethodList ( Class cls, unsigned int *outCount );
+// 替代方法的实现
+IMP class_replaceMethod ( Class cls, SEL name, IMP imp, const char *types );
+// 返回方法的具体实现
+IMP class_getMethodImplementation ( Class cls, SEL name );
+IMP class_getMethodImplementation_stret ( Class cls, SEL name );
+// 类实例是否响应指定的selector
+BOOL class_respondsToSelector ( Class cls, SEL sel );
+```
+`class_addMethod`的实现会覆盖父类的方法实现，但不会取代本类中已存在的实现。如果要修改已经存在的实现，可以使用`method_setImplementation`
+
+```Objective-C
+// 添加协议
+BOOL class_addProtocol ( Class cls, Protocol *protocol );
+// 返回类是否实现指定的协议
+BOOL class_conformsToProtocol ( Class cls, Protocol *protocol );
+// 返回类实现的协议列表
+Protocol * class_copyProtocolList ( Class cls, unsigned int *outCount );
+// 获取版本号
+int class_getVersion ( Class cls );
+// 设置版本号
+void class_setVersion ( Class cls, int version );
+// 创建一个新类和元类
+Class objc_allocateClassPair ( Class superclass, const char *name, size_t extraBytes );
+// 销毁一个类及其相关联的类
+void objc_disposeClassPair ( Class cls );
+// 在应用中注册由objc_allocateClassPair创建的类
+void objc_registerClassPair ( Class cls );
+// 创建类实例
+id class_createInstance ( Class cls, size_t extraBytes );
+// 在指定位置创建类实例
+id objc_constructInstance ( Class cls, void *bytes );
+// 销毁类实例
+void * objc_destructInstance ( id obj );
+// 返回指定对象的一份拷贝
+id object_copy ( id obj, size_t size );
+// 释放指定对象占用的内存
+id object_dispose ( id obj );
+// 修改类实例的实例变量的值
+Ivar object_setInstanceVariable ( id obj, const char *name, void *value );
+// 获取对象实例变量的值
+Ivar object_getInstanceVariable ( id obj, const char *name, void **outValue );
+// 返回指向给定对象分配的任何额外字节的指针
+void * object_getIndexedIvars ( id obj );
+// 返回对象中实例变量的值
+id object_getIvar ( id obj, Ivar ivar );
+// 设置对象中实例变量的值
+void object_setIvar ( id obj, Ivar ivar, id value )
+// 返回给定对象的类名
+const char * object_getClassName ( id obj );
+// 返回对象的类
+Class object_getClass ( id obj );
+// 设置对象的类
+Class object_setClass ( id obj, Class cls );
+// 获取已注册的类定义的列表
+int objc_getClassList ( Class *buffer, int bufferCount );
+// 创建并返回一个指向所有已注册类的指针列表
+Class * objc_copyClassList ( unsigned int *outCount );
+// 返回指定类的类定义
+Class objc_lookUpClass ( const char *name );
+Class objc_getClass ( const char *name );
+Class objc_getRequiredClass ( const char *name );
+// 返回指定类的元类
+Class objc_getMetaClass ( const char *name );
+```
